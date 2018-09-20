@@ -1,10 +1,10 @@
 var aniSpeed = 200;
 $(document).ready(function() {
-  $('#list').load('tracks.html');
+  $('#list').load('discog-tracks.html');
   $('#tracks').hide();
 
   $("#projects").click(function(event){
-    $('#list').load('projects.html');
+    $('#list').load('discog-projects.html');
     $('#current').html("<i class='fas fa-angle-down'></i> PROJECTS.");
     $('#projects').hide(aniSpeed);
     $('#credits').show(aniSpeed);
@@ -12,7 +12,7 @@ $(document).ready(function() {
     $('#myLinks').hide();
   });
   $("#credits").click(function(event){
-    $('#list').load('credits.html');
+    $('#list').load('discog-credits.html');
     $('#current').html("<i class='fas fa-angle-down'></i> CREDITS.");
     $('#projects').show(aniSpeed);
     $('#credits').hide(aniSpeed);
@@ -20,7 +20,7 @@ $(document).ready(function() {
     $('#myLinks').hide();
   });
   $("#tracks").click(function(event){
-    $('#list').load('tracks.html');
+    $('#list').load('discog-tracks.html');
     $('#current').html("<i class='fas fa-angle-down'></i> TRACKS.");
     $('#projects').show(aniSpeed);
     $('#credits').show(aniSpeed);
@@ -36,20 +36,3 @@ $(document).ready(function() {
     }
   });
 });
-
-// var mySongs = {
-//   "songs": [
-//     {
-//       id: 1,
-//       image: 'strollin',
-//       name: 'nowhere',
-//       spotify: 'https://open.spotify.com/track/7wnOwCM7fMewkIuKmgkkJm?si=PyYkD-SeQ0ernzVLpn1lTQ',
-//       soundcloud: 'https://soundcloud.com/luna/strollinthu'
-//     }
-//   ]
-// }
-// function displayTrack() {
-//   var template =$('#template').html();
-//   var output = Mustache.render(template, mySongs);
-//     $('char-info').html(output);
-// }

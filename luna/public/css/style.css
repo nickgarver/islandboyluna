@@ -39,7 +39,7 @@ body {
   z-index: -9;
   content: '';
   position: absolute;
-  background: rgba(245, 246, 250,0.6);
+  background: rgba(245, 246, 250,0.8);
   width: 100%;
   height: 100%;
   top: 0;
@@ -126,6 +126,24 @@ body {
   /* padding-left: 40px; */
   overflow: hidden;
 }
+.media {
+  transition-duration: .2s;
+  position: absolute;
+  text-align: center;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin: 0;
+  top: 0px;
+  left: 0px;
+  float: left;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  border: 2px solid red;
+  height: 100%;
+  width: 100%;
+}
 .bio{
   box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -153,6 +171,16 @@ body {
   padding: 0px;
   height: 100%;
   width: 20%;
+  padding: 0px 0;
+}
+.grid-row-small{
+  transition-duration: .2s;
+  position: relative;
+  float: left;
+  text-align: center;
+  padding: 0px;
+  height: 100%;
+  width: 33.333%;
   padding: 0px 0;
 }
 .grid-element {
@@ -204,9 +232,6 @@ body {
 .itunes {
   color: #111111 !important;
 }
-.soundcloud {
-  color:#ff8800 !important;
-}
 .twitter {
   color:#1da1f2 !important;
 }
@@ -218,6 +243,9 @@ body {
 }
 .youtube {
   color:#FC0D1B !important;
+}
+.soundcloud {
+  color:#ff8800 !important;
 }
 nav {
   transform: translate(-100%) rotate(90deg);
@@ -368,16 +396,34 @@ li > a:hover {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    /* background-color: rgba(255,255,255,1); */
-
-    /* background: rgba(255,255,255,.5); */
     border-bottom: 1px solid rgba(1,1,1,.2);
   }
-  .grid-row:hover{
+  .grid-row-small{
+    float: none;
+    cursor: pointer;
+    line-height: 75px;
+    width: 100%;
+    height: 33.333%;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    vertical-align: middle;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    border-bottom: 1px solid rgba(1,1,1,.2);
+  }
+  .grid-row-small:hover, .grid-row:hover{
     background-color: rgba(255,255,255,.1);
   }
-  .grid-row:active{
+  .grid-row-small:active, .grid-row:active{
     background-color: rgba(255,255,255,.1);
+  }
+  .grid-row-small:hover .grid-icon {
+    color: #48dbfb;
+  }
+  .grid-row-small:hover .grid-desc {
+    color: #48dbfb;
   }
   .grid-row:hover .grid-icon {
     color: #48dbfb;
@@ -435,11 +481,24 @@ li > a:hover {
     transition-duration: .2s;
     border-bottom: 1px solid rgba(255,255,255,.2);
   }
-  .grid-row:hover{
+  .grid-row-small{
+    float: none;
+    cursor: pointer;
+    line-height: 75px;
+    width: 100%;
+    height: 33.333%;
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
+    vertical-align: middle;
+    transition-duration: .2s;
+    border-bottom: 1px solid rgba(255,255,255,.2);
+  }
+  .grid-row-small:hover, .grid-row:hover{
     transition-duration: .2s;
     background-color: rgba(255,255,255,.1);
   }
-  .grid-row:active{
+  .grid-row-small:active, .grid-row:active{
     background-color: rgba(255,255,255,.1);
   }
   .grid-element {
