@@ -1,0 +1,35 @@
+<head>
+  <title>PRESS PHOTOS.</title>
+  <script type="text/javascript" src="js/mood.js"></script>
+</head>
+<div class="topNav" id="tNav">
+  <a href="javascript:void(0);" id="current" class="luna-page">
+    <i class="fas fa-angle-down"></i> PRESS.
+  </a>
+  <div id="myLinks">
+    <a href="#mood" id="mood">MOOD.</a>
+  </div>
+</div>
+
+<div id="pics" class="media">
+  <div class="column">
+    <div ng-repeat="myImage in myImages">
+      <img style="width:100%" ng-src="{{getImagePath(myImage)}}"/>
+    </div>
+  </div>
+  <div class="column">
+    <div ng-repeat="myImage in myImagesTwo">
+      <img style="width:100%" ng-src="{{getImagePath(myImage)}}"/>
+    </div>
+  </div>
+  <div class="column">
+    <div ng-repeat="myImage in myImagesThree">
+      <img style="width:100%" ng-src="{{getImagePath(myImage)}}"/>
+    </div>
+  </div>
+  <div class="column">
+    <div ng-repeat="myImage in myImagesFour">
+      <img style="width:100%" ng-src="{{getImagePath(myImage)}}"/>
+    </div>
+  </div>
+</div>

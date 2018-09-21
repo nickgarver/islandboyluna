@@ -1,15 +1,97 @@
 var app = angular.module('myApp', ['ngRoute']);
 
+app.controller('MoodController', ['$scope', function($scope) {
+  $scope.imgCount = 244;
+  $scope.myImages = [];
+  function chunkArray(myArray, chunk_size){
+      var index = 0;
+      var arrayLength = myArray.length;
+      var tempArray = [];
+      for (index = 0; index < arrayLength; index += chunk_size) {
+          myChunk = myArray.slice(index, index+chunk_size);
+          // Do something if you want with the group
+          tempArray.push(myChunk);
+      }
+      return tempArray;
+  }
+
+  function shuffle(a) {
+    for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
+
+  for (var i = 1; i < $scope.imgCount; i++) {
+    $scope.myImages.push("media/mood/image-" + i + ".jpg");
+  }
+  shuffle($scope.myImages);
+  var temp = chunkArray($scope.myImages, Math.round($scope.imgCount/4));
+  $scope.myImages = temp[0];
+  $scope.myImagesTwo = temp[1];
+  $scope.myImagesThree = temp[2];
+  $scope.myImagesFour = temp[3];
+  console.log('whut');
+  $scope.getImagePath = function(imageName) {
+  return imageName;
+  };
+}]);
+
+app.controller('PressController', ['$scope', function($scope) {
+  $scope.imgCount = 5;
+  $scope.myImages = [];
+  function chunkArray(myArray, chunk_size){
+      var index = 0;
+      var arrayLength = myArray.length;
+      var tempArray = [];
+      for (index = 0; index < arrayLength; index += chunk_size) {
+          myChunk = myArray.slice(index, index+chunk_size);
+          // Do something if you want with the group
+          tempArray.push(myChunk);
+      }
+      return tempArray;
+  }
+
+  function shuffle(a) {
+    for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
+
+  for (var i = 1; i < $scope.imgCount; i++) {
+    $scope.myImages.push("media/press/image-" + i + ".jpg");
+  }
+  shuffle($scope.myImages);
+  var temp = chunkArray($scope.myImages, Math.round($scope.imgCount/4));
+  $scope.myImages = temp[0];
+  $scope.myImagesTwo = temp[1];
+  $scope.myImagesThree = temp[2];
+  $scope.myImagesFour = temp[3];
+  console.log('whut');
+  $scope.getImagePath = function(imageName) {
+  return imageName;
+  };
+}]);
+
 app.config(function ($routeProvider,$locationProvider) {
-  // $locationProvider.hashPrefix('!');
+  $locationProvider.hashPrefix('');
   // $locationProvider.html5Mode(true);
   $routeProvider
     .when('/', {
       templateUrl: 'home.html'
     })
-    .when('/media', {
-      url: 'media.html',
-      templateUrl: 'media.html'
+    .when('/mood', {
+      url: 'mood.html',
+      templateUrl: 'mood.html',
+      controller: 'MoodController'
+    })
+    .when('/press', {
+      url: 'press.html',
+      templateUrl: 'press.html',
+      controller: 'PressController'
     })
     .when('/discog', {
       url: 'discog.html',
