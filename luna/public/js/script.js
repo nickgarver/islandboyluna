@@ -1,3 +1,12 @@
+$(window).scroll(function () {
+    var scrollTop = $(window).scrollTop();
+    var height = $(window).height()/10;
+    console.log('DO NOTHING');
+    $('#title, #nav').css({
+        'opacity': 1
+    });
+});
+
 var aniSpeed = 200;
 $(document).ready(function() {
   $('#list').load('discog-tracks.html');

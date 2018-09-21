@@ -32,7 +32,6 @@ app.controller('MoodController', ['$scope', function($scope) {
   $scope.myImagesTwo = temp[1];
   $scope.myImagesThree = temp[2];
   $scope.myImagesFour = temp[3];
-  console.log('whut');
   $scope.getImagePath = function(imageName) {
   return imageName;
   };
@@ -70,7 +69,6 @@ app.controller('PressController', ['$scope', function($scope) {
   $scope.myImagesTwo = temp[1];
   $scope.myImagesThree = temp[2];
   $scope.myImagesFour = temp[3];
-  console.log('whut');
   $scope.getImagePath = function(imageName) {
   return imageName;
   };
