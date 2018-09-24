@@ -1,0 +1,28 @@
+body {
+  background-color: black;
+}
+.luna-head, .luna-page, #myLinks a, li > a {
+  color: white !important;
+}
+.luna-head:hover,.luna-page:hover, #myLinks a:hover, li > a:hover {
+  color: var(--text-hover)!important;
+}
+
+@media (min-width: 320px) and (max-width: 812px) and (orientation : portrait) {
+
+  .media {
+    /* top right bottom left */
+    padding: 37px 20px 0px 20px;
+  }
+  .column {
+  padding: 0 4px;
+  -ms-flex: 100%;
+  flex: 100%;
+  max-width: 100%;
+  }
+
+  .column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  }
+}

@@ -82,13 +82,13 @@ body {
   margin: 0px;
   padding: 0px;
   position: fixed;
-  color: var(--text-color) !important;
+  color: var(--text-color);
   opacity: 1;
   z-index: 100;
   text-decoration: none;
 }
 .luna-page:hover {
-  color: var(--text-hover) !important;
+  color: var(--text-hover);
 }
 .grid-box {
   transition-duration: .2s;
@@ -389,6 +389,7 @@ li > a:hover {
   margin-top: 8px;
   vertical-align: middle;
 }
+
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
   .column {
@@ -404,21 +405,6 @@ li > a:hover {
       content: attr(data-abbr);
   }
   .abbriviate span { display: none; } */
-  .media {
-    /* top right bottom left */
-    padding: 22px 0px 0px 0px;
-  }
-  .column {
-  padding: 0px;
-  -ms-flex: 100%;
-  flex: 100%;
-  max-width: 100%;
-  }
-
-  .column img {
-  margin-top: 0px;
-  vertical-align: middle;
-  }
   .grid-box{
   height: 100%;
   padding: 0px 0;

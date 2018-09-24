@@ -1,5 +1,6 @@
 <head>
   <title>MOOD.</title>
+  <link rel="stylesheet" href="css/media.css">
   <script type="text/javascript" src="js/mood.js"></script>
 </head>
 <div class="topNav" id="tNav">
@@ -14,22 +15,30 @@
 <div id="pics" class="media">
   <div class="column">
     <div ng-repeat="myImage in myImages">
-      <img style="width:100%" ng-src="{{getImagePath(myImage)}}"/>
+      <a href="{{getImagePath(myImage)}}" download="islandboyluna">
+        <img style="width:100%" ng-src="{{getImagePath(myImage)}}"/>
+      </a>
     </div>
   </div>
   <div class="column">
     <div ng-repeat="myImage in myImagesTwo">
-      <img style="width:100%" ng-src="{{getImagePath(myImage)}}"/>
+      <a href="{{getImagePath(myImage)}}" download="islandboyluna">
+        <img style="width:100%" ng-src="{{getImagePath(myImage)}}"/>
+      </a>
     </div>
   </div>
   <div class="column">
     <div ng-repeat="myImage in myImagesThree">
-      <img style="width:100%" ng-src="{{getImagePath(myImage)}}"/>
+      <a href="{{getImagePath(myImage)}}" download="islandboyluna">
+        <img style="width:100%" ng-src="{{getImagePath(myImage)}}"/>
+      </a>
     </div>
   </div>
   <div class="column">
     <div ng-repeat="myImage in myImagesFour">
-      <img style="width:100%" ng-src="{{getImagePath(myImage)}}"/>
+      <a href="{{getImagePath(myImage)}}" download="islandboyluna">
+        <img style="width:100%" ng-src="{{getImagePath(myImage)}}"/>
+      </a>
     </div>
   </div>
 </div>
