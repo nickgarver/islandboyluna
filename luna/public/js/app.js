@@ -25,7 +25,7 @@ app.controller('MoodController', ['$scope', function($scope) {
   }
 
   for (var i = 1; i < $scope.imgCount; i++) {
-    $scope.myImages.push("media/mood/image-" + i + ".jpg");
+    $scope.myImages.push(i);
   }
   shuffle($scope.myImages);
   var temp = chunkArray($scope.myImages, Math.round($scope.imgCount/4));
@@ -34,7 +34,7 @@ app.controller('MoodController', ['$scope', function($scope) {
   $scope.myImagesThree = temp[2];
   $scope.myImagesFour = temp[3];
   $scope.getImagePath = function(imageName) {
-  return imageName;
+  return "media/mood/image-" + imageName + '.jpg';
   };
 }]);
 
@@ -63,7 +63,7 @@ app.controller('PressController', ['$scope', function($scope) {
   }
 
   for (var i = 1; i < $scope.imgCount; i++) {
-    $scope.myImages.push("media/press/image-" + i + ".jpg");
+    $scope.myImages.push(i);
   }
   shuffle($scope.myImages);
   var temp = chunkArray($scope.myImages, Math.round($scope.imgCount/4));
@@ -72,8 +72,182 @@ app.controller('PressController', ['$scope', function($scope) {
   $scope.myImagesThree = temp[2];
   $scope.myImagesFour = temp[3];
   $scope.getImagePath = function(imageName) {
-  return imageName;
+  return "media/press/image-" + imageName + '.jpg';
   };
+}]);
+
+app.controller('TracksController', ['$scope', function($scope) {
+  $scope.myImages = [];
+  $scope.myTracks = ['beenawhile','helenkeller','applestore','coldcoffee',
+  'vanilla','toyou','flyaway','nowhere','highland','espresso','blind','nicotine',
+  'sleepin','reload','back','feelinlike','butterfly','alive','rewind','ridin',
+  'loversquarrel','atnight','medy','itililt','idontneedyou','strollin',
+  'itsokaytobesad','litinaforest','wakapella'];
+  $scope.myNames = ['BEEN A WHILE','HELEN KELLER','APPLE STORE','COLD COFFEE',
+  'VANILLA','TO YOU','FLY AWAY','NOWHERE','HIGHLAND','ESPRESSO','BLIND','NICOTINE',
+  'SLEEPIN','RELOAD','BACK','FEELIN LIKE','BUTTERFLY','ALIVE','REWIND','RIDIN',
+  'LOVERS QUARREL','AT NIGHT','MEDY','I THINK I LIKE IT LIKE THAT','IDONTNEEDYOU','STROLLIN',
+  'ITS OKAY TO BE SAD','LIT IN A FOREST','WAKAPELLA'];
+  $scope.imgCount = $scope.myTracks.length * 5;
+  function shuffle(a) {
+    for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
+
+  for (var i = 1; i < $scope.imgCount; i++) {
+    $scope.myImages.push(i);
+  }
+  shuffle($scope.myImages);
+  $scope.getImagePath = function(imageName) {
+  return "media/mood/image-" + imageName + '.jpg';
+  };
+  $scope.getCoverArt = function(track) {
+    if (track == 'medy' || track == 'alive' || track == 'atnight'  || track == 'rewind' || track == 'ridin' || track == 'itililt' || track == 'loversquarrel')
+      track = 'loveinthemorning'
+    var artLink = "media/art/" + track + '.jpg';
+
+  return artLink;
+  };
+  $scope.getTrackName = function(trackNum) {
+  return $scope.myNames[trackNum];
+  };
+
+  var myHeight = function(){
+    return (Math.floor(Math.random() * 250) + 100).toString() + 'px';
+  };
+  var myLeft = function(){
+    return (Math.floor(Math.random() * 80) + 0).toString() + '%';
+  };
+  var myTop = function(){
+    return (Math.floor(Math.random() * ($scope.myTracks.length * 350)) + 0).toString() + 'px';
+  };
+  $scope.setImageStyle = function() {
+    return ({height: myHeight, left: myLeft, top: myTop});
+  };
+
+  // $scope.getImageLeft = function() {
+  // return 'left';
+  // };
+}]);
+
+app.controller('ProjectsController', ['$scope', function($scope) {
+  $scope.myImages = [];
+  $scope.myTracks = ['loveinthemorning'];
+  $scope.myNames = ['LOVE IN THE MORNING'];
+  $scope.imgCount = $scope.myTracks.length * 5;
+  function shuffle(a) {
+    for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
+
+  for (var i = 1; i < $scope.imgCount; i++) {
+    $scope.myImages.push(i);
+  }
+  shuffle($scope.myImages);
+  $scope.getImagePath = function(imageName) {
+  return "media/mood/image-" + imageName + '.jpg';
+  };
+  $scope.getCoverArt = function(track) {
+  var artLink = "media/art/" + track + '.jpg';
+  return artLink;
+  };
+  $scope.getTrackName = function(trackNum) {
+  return $scope.myNames[trackNum];
+  };
+
+  var height = function(){
+    return (Math.floor(Math.random() * 250) + 100).toString() + 'px';
+  };
+  var left = function(){
+    return (Math.floor(Math.random() * 80) + 0).toString() + '%';
+  };
+  var bottom = function(){
+    return (Math.floor(Math.random() * ($scope.myTracks.length * 350)) + 0).toString() + 'px';
+  };
+  $scope.setImageStyle = function() {
+    return ({height: height, left: left, bottom: bottom});
+  };
+
+  // $scope.getImageLeft = function() {
+  // return 'left';
+  // };
+}]);
+
+app.controller('CreditsController', ['$scope', function($scope) {
+  $scope.myImages = [];
+  $scope.myTracks = ['woah','fantasy','knowmyvision','smiling','sunsets','wetnap','well','tru','waxx'];
+  $scope.myNames = [
+  'prod. / mixing: Leo Pastel - Woah (feat. Muwosi)',
+  'prod. / mixing: Leo Pastel - Fantasy',
+  'prod. / mixing: Phree - know My Vision',
+  'prod. / mixing: rossi blue - smiling w/ my heart broken',
+  'prod. / mixing: Ian.Ross - Sunsets In Pula.',
+  'prod.: Joey Holli - WET NAP',
+  'prod.: Alex Flowers - Well',
+  'prod. / mixing: Dayo Gold - Tru Playaz',
+  'bg vocal: Phree - WAXX'
+  ];
+  $scope.myLinks = [
+  'https://soundcloud.com/leolikelion/woah-feat-muwosi',
+  'https://soundcloud.com/leolikelion/fantasy',
+  'https://youtu.be/ys-g4Rxs734',
+  'https://soundcloud.com/rossibluebills/smiling-with-my-heart-broken-prod-islandboyluna',
+  'https://soundcloud.com/ian-waddell/sunsets-in-pula-prod-luna',
+  'https://soundcloud.com/joey_holli/wet-nap-prod-luna',
+  'https://soundcloud.com/young-flowers-69/well',
+  'https://soundcloud.com/dayogold/tru-playaz-dayo-gold-prod-luna',
+  'https://youtu.be/CchVhsoIM54'
+  ];
+  $scope.imgCount = $scope.myTracks.length*5;
+  console.log($scope.imgCount);
+  function shuffle(a) {
+    for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+    }
+    return a;
+  }
+
+  for (var i = 1; i < $scope.imgCount; i++) {
+    $scope.myImages.push(i);
+  }
+  shuffle($scope.myImages);
+  $scope.getImagePath = function(imageName) {
+  return "media/mood/image-" + imageName + '.jpg';
+  };
+  $scope.getCoverArt = function(track) {
+  var artLink = "media/art/" + track + '.jpg';
+  return artLink;
+  };
+  $scope.getTrackName = function(trackNum) {
+  return $scope.myNames[trackNum];
+  };
+  $scope.getTrackLink = function(trackNum) {
+  return $scope.myLinks[trackNum];
+  };
+
+  var myHeight = function(){
+    return (Math.floor(Math.random() * 250) + 100).toString() + 'px';
+  };
+  var myLeft = function(){
+    return (Math.floor(Math.random() * 80) + 0).toString() + '%';
+  };
+  var myTop = function(){
+    return (Math.floor(Math.random() * ($scope.myTracks.length * 350)) + 0).toString() + 'px';
+  };
+  $scope.setImageStyle = function() {
+    return ({height: myHeight, left: myLeft, top: myTop});
+  };
+
+  // $scope.getImageLeft = function() {
+  // return 'left';
+  // };
 }]);
 
 app.config(function ($routeProvider,$locationProvider) {
@@ -93,9 +267,20 @@ app.config(function ($routeProvider,$locationProvider) {
       templateUrl: 'press.html',
       controller: 'PressController'
     })
-    .when('/discog', {
-      url: 'discog.html',
-      templateUrl: 'discog.html'
+    .when('/tracks', {
+      url: 'tracks.html',
+      templateUrl: 'tracks.html',
+      controller: 'TracksController'
+    })
+    .when('/projects', {
+      url: 'projects.html',
+      templateUrl: 'projects.html',
+      controller: 'ProjectsController'
+    })
+    .when('/credits', {
+      url: 'credits.html',
+      templateUrl: 'credits.html',
+      controller: 'CreditsController'
     })
     .when('/bio', {
       url: 'bio.html',
@@ -570,7 +755,7 @@ app.controller('nowhere',
 app.controller('itsokaytobesad',
   function ParamsController($scope, $routeParams) {
     $scope.name = 'ITS OKAY TO BE SAD'
-    $scope.pic = '../media/art/itsokay.jpg'
+    $scope.pic = '../media/art/itsokaytobesad.jpg'
     $scope.spotify = null
     $scope.apple = null
     $scope.soundcloud = 'https://soundcloud.com/luna/its-okay-to-be-sad'
@@ -582,7 +767,7 @@ app.controller('itsokaytobesad',
 app.controller('litinaforest',
   function ParamsController($scope, $routeParams) {
     $scope.name = 'LIT IN A FOREST'
-    $scope.pic = '../media/art/lit.jpg'
+    $scope.pic = '../media/art/litinaforest.jpg'
     $scope.spotify = null
     $scope.apple = null
     $scope.soundcloud = 'https://soundcloud.com/luna/lit-in-a-forest'

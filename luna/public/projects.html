@@ -1,0 +1,31 @@
+<head>
+  <title>PROJECTS.</title>
+  <script type="text/javascript" src="js/script.js"></script>
+  <link rel="stylesheet" href="css/parallax.css">
+</head>
+<div class="topNav">
+  <a href="javascript:void(0);" id="current" class="luna-page">
+    <i class="fas fa-angle-down"></i> PROJECTS.
+  </a>
+  <div id="myLinks">
+    <a href="#tracks" id="projects">TRACKS.</a>
+    <a href="#credits" id="credits">CREDITS.</a>
+  </div>
+</div>
+<div id="myDiv" class="parallax">
+  <div class="grid-box-discog discog" id="list">
+    <div class="post" ng-repeat="myTrack in myTracks">
+      <a href="#{{myTrack}}">
+        <img ng-src="{{getCoverArt(myTrack)}}" style="clear:both; transform-origin: middle bottom 0;">
+        <small>{{getTrackName($index)}}</i></small>
+      </a>
+    </div>
+  </div>
+  <div class="parallax_layer parallax_layer--back">
+      <div ng-repeat="myImage in myImages">
+        <a href="{{getImagePath(myImage)}}">
+          <img class="homeimg" ng-style="setImageStyle()" ng-src="{{getImagePath(myImage)}}"/>
+        </a>
+      </div>
+  </div>
+</div>
