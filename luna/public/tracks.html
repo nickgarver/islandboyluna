@@ -4,7 +4,7 @@
   <link rel="stylesheet" href="css/parallax.css">
 </head>
 <div class="topNav">
-  <a href="javascript:void(0);" id="current" class="luna-page">
+  <a id="current" class="luna-page">
     <i class="fas fa-angle-down"></i> TRACKS.
   </a>
   <div id="myLinks">
@@ -13,7 +13,7 @@
   </div>
 </div>
 <div id="myDiv" class="parallax">
-  <div class="grid-box-discog discog" id="list">
+  <div class="discog" id="list">
     <div class="post" ng-repeat="myTrack in myTracks">
       <a href="#{{myTrack}}">
         <img ng-src="{{getCoverArt(myTrack)}}" style="clear:both;">

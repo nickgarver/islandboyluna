@@ -423,7 +423,7 @@ app.controller('beenawhile',
     $scope.spotify = 'https://open.spotify.com/track/5sIHlthdQhiRCYf4ddIw9x?si=f90gu35QR5KKQxJcGKe4qg'
     $scope.apple = 'https://itunes.apple.com/us/album/been-a-while-single/1435451906'
     $scope.soundcloud = 'https://soundcloud.com/luna/been-a-while'
-    $scope.bandcamp = ''
+    $scope.bandcamp = 'https://islandboyluna.bandcamp.com'
     $scope.youtube = 'https://www.youtube.com/watch?v=N_AUsmbYs0w'
   }
 );
@@ -435,7 +435,7 @@ app.controller('coldcoffee',
     $scope.spotify = 'https://open.spotify.com/track/52zvGKn41xjxzTflXBa66i?si=LkQ4wNhnQsG5ow9SUyVQ2A'
     $scope.apple = 'https://itunes.apple.com/us/album/cold-coffee-single/1391432290'
     $scope.soundcloud = 'https://www.soundcloud/luna/cold-coffee'
-    $scope.bandcamp = ''
+    $scope.bandcamp = 'https://islandboyluna.bandcamp.com'
     $scope.youtube = 'https://www.youtube.com/watch?v=TDghcvDi8rA'
   }
 );
@@ -447,7 +447,7 @@ app.controller('applestore',
     $scope.spotify = 'https://open.spotify.com/track/0AlMe8uF6mseLfXdSdN0sS?si=Fw635wY3T1eRMr8qTxYKpw'
     $scope.apple = 'https://itunes.apple.com/us/album/apple-store-single/1406595621'
     $scope.soundcloud = 'https://www.soundcloud/luna/apple-store'
-    $scope.bandcamp = ''
+    $scope.bandcamp = 'https://islandboyluna.bandcamp.com'
     $scope.youtube = 'https://www.youtube.com/watch?v=6eBwWALlZsE'
   }
 );
@@ -459,7 +459,7 @@ app.controller('vanilla',
     $scope.spotify = 'https://open.spotify.com/track/79qpfWYv5L1pOs11gnaEmL?si=qHOvgGhcTOq26bVYzu96kw'
     $scope.apple = 'https://itunes.apple.com/us/album/vanilla-single/1378801097'
     $scope.soundcloud = 'https://www.soundcloud/luna/vanilla'
-    $scope.bandcamp = ''
+    $scope.bandcamp = 'https://islandboyluna.bandcamp.com/'
     $scope.youtube = 'https://youtu.be/kaP5y-PKiM4'
   }
 );
@@ -471,7 +471,7 @@ app.controller('toyou',
     $scope.spotify = 'https://open.spotify.com/track/3CkXCgYGuBcYnG1RV4a3ve?si=YfNHg9QTSWq-KlayvsLC5Q'
     $scope.apple = 'https://itunes.apple.com/us/album/to-you-single/1378815752'
     $scope.soundcloud = 'https://www.soundcloud/luna/toyou'
-    $scope.bandcamp = ''
+    $scope.bandcamp = 'https://islandboyluna.bandcamp.com/track/to-you-3'
     $scope.youtube = 'https://youtu.be/TBO7UkfdTOo'
   }
 );
@@ -483,7 +483,7 @@ app.controller('flyaway',
     $scope.spotify = 'https://open.spotify.com/track/5JjCTaJQRxjSijK11UDEnQ?si=hatqiPODTJ2p_bfNM_8MRQ'
     $scope.apple = 'https://itunes.apple.com/us/album/fly-away-feat-majeur-dayo-gold-phree-leo-single/1349474256'
     $scope.soundcloud = 'https://www.soundcloud/luna/flyaway'
-    $scope.bandcamp = ''
+    $scope.bandcamp = 'https://islandboyluna.bandcamp.com/track/fly-away-feat-majeur-dayo-gold-phree-leo'
     $scope.youtube = 'https://youtu.be/M1w-L39aG90'
   }
 );
@@ -495,7 +495,7 @@ app.controller('slow',
     $scope.spotify = 'https://open.spotify.com/track/3AD1om5Tvy8IU2u5zZzv5K?si=_lgZHBmORpe7FQJ4w1bZFw'
     $scope.apple = 'https://itunes.apple.com/us/album/slow-feat-sacha-single/1337197356'
     $scope.soundcloud = 'https://www.soundcloud/luna/slow'
-    $scope.bandcamp = ''
+    $scope.bandcamp = 'https://islandboyluna.bandcamp.com/'
     $scope.youtube = 'https://youtu.be/6F7kAr-cnu0'
   }
 );
@@ -507,7 +507,7 @@ app.controller('highland',
     $scope.spotify = 'https://open.spotify.com/track/33UPTyIdlxWSwfcEnKIhvo?si=LEU_UDEDQjel3SaBNDE9QQ'
     $scope.apple = 'https://itunes.apple.com/us/album/highland-single/1333664924'
     $scope.soundcloud = 'https://www.soundcloud/luna/highland'
-    $scope.bandcamp = ''
+    $scope.bandcamp = 'https://islandboyluna.bandcamp.com/'
     $scope.youtube = 'https://youtu.be/D7VZD4t5eE8'
   }
 );
@@ -711,7 +711,7 @@ app.controller('idontneedyou',
     $scope.spotify = 'https://open.spotify.com/track/3HmtUV7YgDuB8KUTKU9OAW?si=nMnM6b4nSRiMh-QkWUIq9Q'
     $scope.apple = 'https://itunes.apple.com/us/album/idontneedyou/1246299770?i=1246299821'
     $scope.soundcloud = 'https://soundcloud.com/luna/idontneedyou'
-    $scope.bandcamp = ''
+    $scope.bandcamp = 'https://islandboyluna.bandcamp.com/'
     $scope.youtube = 'https://youtu.be/-QoU3LPL-TA'
   }
 );
@@ -723,7 +723,7 @@ app.controller('strollin',
     $scope.spotify = 'https://open.spotify.com/track/7wnOwCM7fMewkIuKmgkkJm?si=F94MvLiYTsC84mv_gKvL9w'
     $scope.apple = 'https://itunes.apple.com/us/album/strollin/1253172614?i=1253172848'
     $scope.soundcloud = 'https://soundcloud.com/luna/strollinthu'
-    $scope.bandcamp = ''
+    $scope.bandcamp = 'https://islandboyluna.bandcamp.com/'
     $scope.youtube = 'https://youtu.be/dvDHM8P9qaw'
   }
 );
@@ -735,7 +735,7 @@ app.controller('helenkeller',
     $scope.spotify = null
     $scope.apple = null
     $scope.soundcloud = 'https://www.soundcloud/luna/helen-keller'
-    $scope.bandcamp = ''
+    $scope.bandcamp = 'https://islandboyluna.bandcamp.com/'
     $scope.youtube = 'https://youtu.be/YKQx5Roc2FQ'
   }
 );
@@ -747,7 +747,7 @@ app.controller('nowhere',
     $scope.spotify = null
     $scope.apple = null
     $scope.soundcloud = 'https://www.soundcloud/luna/nowhere'
-    $scope.bandcamp = ''
+    $scope.bandcamp = 'https://islandboyluna.bandcamp.com/'
     $scope.youtube = 'https://youtu.be/LbpC9eIyVKI'
   }
 );
